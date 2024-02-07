@@ -1,5 +1,5 @@
-﻿from ast import Name
-
+﻿# class 練習
+from ast import Name
 
 class ReadFile():
     def __init__(self, path):
@@ -61,3 +61,46 @@ class GoldMember(memeber):
 member1 = GoldMember('lee', '10052', 15000)
 member1.member()
 member1.get_discount()
+
+# Pandas 資料處理函數
+''' 
+    States          Population        Postal
+0   California      39613493          CA
+1   Texas           29730311          TX
+2   Florida         21944577          FL
+3   New York        19299981          NY
+
+'''
+
+# Pandas Series
+
+import pandas as pd
+fruits = ['apple', 'orange', 'lemon', 'grape', 'banana', 'tomato']
+num  = [1, 3, 5, 7, 9, 11]
+
+s = pd.Series(num, index = fruits)
+print(s)
+print(s.index)
+print(s.values)
+print('orange = ', s['orange'])             #取一個索引值
+print('orange = ', s[['orange','lemon']])   #取兩個索引值
+print((s + 5)*3)
+
+print("\n\n")
+
+product = {'分類' : ['居家','居家','娛樂','娛樂','科技','科技'],
+           '商店' : ['家樂福','大潤發','家樂福','全聯超','大潤發','家樂福'],
+           '價格' : [11.42,23.50,19.99,15.95,55.75,111.55]}
+df = pd.DataFrame(product)
+print(df)
+
+ordinals = ['A','B','C','D','E','F']
+o_small = ['a','b','c','d','e','e']
+
+df1 = pd.DataFrame(product, index = ordinals)
+df2 = pd.DataFrame(product, index = o_small)
+print(df1)
+print(df2)
+
+df1.to_html("C:/Users/notel/OneDrive/IE/GitHub/Python_Learning_LCC/LC_Computer/Class_Program/Class/Other File/DataFrame.html")
+# <mete charset = "utf-8"> # html 的編碼轉換，填在第一行
