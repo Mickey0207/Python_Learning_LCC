@@ -1,0 +1,102 @@
+
+
+import matplotlib.pyplot as plt
+
+a=['trans','food','phone','books','enter','rent']
+b=[3,9,2,1,7,8]
+exp=[0,0.2,0,0,0.1,0]
+
+plt.pie(b,labels=a,autopct='%.2f%%',explode=exp,shadow=True)
+plt.legend(title='這是圖例')
+plt.show()
+
+
+
+
+import matplotlib.pyplot as plt
+x=[]
+for i in range(1,7):
+    x.append(i)
+print(x)
+y=[1,6,9,15,25,55]
+z=[3,6,9,22,38,77]
+
+plt.plot(x,y,x,z)
+
+plt.show()
+
+
+
+
+import matplotlib.pyplot as plt
+import random
+
+
+x=[]
+w=[]
+for i in range(1,7):
+    x.append(i)
+print(x)
+y=[1,6,9,15,25,55]
+z=[3,6,9,22,38,77]
+
+for i in range(1,7):
+    w.append(random.randint(1,70))          
+print(w)
+
+plt.plot(x,y,x,z,x,w)
+plt.legend(['tom','ben','ann'])
+plt.show()
+
+
+
+while True:
+    a=input('請輸入資料')
+print('881') 
+
+
+
+i=0
+while i<10:
+    print('enough')
+    i=i+1
+print('881')    
+
+
+
+
+path='test.txt'
+with open(path,'w') as f:
+    while True:
+        ans=input('請輸入帳號!!, 如果要離開請輸入q')
+        f.write(ans)
+        if ans=='q':
+            break
+
+
+print('歡迎下次再登入')
+
+
+
+
+path='test.txt'
+with open(path,'a') as f:
+    while True:
+        ans=input('請輸入帳號!!, 如果要離開請輸入q')
+        f.write(ans+'\n')
+        if ans=='q':
+            break
+
+
+print('歡迎下次再登入')
+
+
+
+import csv
+path='789.csv'
+with open(path,'w',encoding='utf-8',newline='') as csvfile:
+    cc=csv.writer(csvfile,delimiter='$')
+    cc.writerow(['姓名','身高','體重'])
+    cc.writerow(['王','170','70'])
+    cc.writerow(['李','180','80'])
+print('輸入完成')
