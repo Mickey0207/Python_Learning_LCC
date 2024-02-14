@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Chrome open exe
+/LC_Computer/Class_Program/Class/Other File/chrome-headless-shell-win64/
